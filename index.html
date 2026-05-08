@@ -7,6 +7,46 @@
     <title>Calculadora</title>
   </head>
   <body>
+    <header class="temas-buttons">
+      <span>Clique para alterar o Tema</span>
+      <button type="button" class="azul" onclick="trocarTema('azul')"></button>
+      <button type="button" class="amarelo" onclick="trocarTema('amarelo')"></button>
+      <button type="button" class="magenta" onclick="trocarTema('magenta')"></button>
+    </header>
+    <div class="calculadora calculadora--fundo-principal calculadora--texto-principal">
+      <!-- Mostrar -->
+      <input type="text" class="calculadora__input" />
+
+      <!-- Linha de botões -->
+      <button type="button" class="calculadora__button calculadora--fundo-secundario" onclick="limparDisplay()">C</button>
+      <button type="button" class="calculadora__button calculadora--fundo-secundario" onclick="apagarUltimo()">&#9003;</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque" onclick="obterValorDoButton('&#37;')">&#37;</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque" onclick="obterValorDoButton('/')">&divide;</button>
+
+      <!-- Linha de botões -->
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('7')">7</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('8')">8</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('9')">9</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque" onclick="obterValorDoButton('*')">&times;</button>
+
+      <!-- Linha de botões -->
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('4')">4</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('5')">5</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('6')">6</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque" onclick="obterValorDoButton('-')">-</button>
+
+      <!-- Linha de botões -->
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('1')">1</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('2')">2</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('3')">3</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque" onclick="obterValorDoButton('&plus;')">&plus;</button>
+
+      <!-- Linha de botões -->
+      <!-- <button type="button" class="calculadora__button" onclick="inverter()">&plusmn;</button> -->
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('0')">0</button>
+      <button type="button" class="calculadora__button" onclick="obterValorDoButton('.')">&#44;</button>
+      <button type="button" class="calculadora__button calculadora--cor-destaque column-2-bottom-right" onclick="calcular()">&equals;</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
